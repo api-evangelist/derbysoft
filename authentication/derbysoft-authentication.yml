@@ -1,0 +1,51 @@
+generated: '2026-07-18'
+method: searched
+source: https://pc.knowledgebase.derbysoftsec.com/en/support/solutions/articles/70000663114-account
+docs: https://pc.knowledgebase.derbysoftsec.com/en/support/solutions/articles/70000663114-account
+description: >-
+  DerbySoft Property Connector Integration API authentication. Access is granted
+  with a Bearer token obtained via the OAuth 2.0 client-credentials pattern: the
+  integrator obtains a Client ID (account_id) and Client Secret from DerbySoft
+  (pms.service@derbysoft.net), Base64-encodes "client_id:client_secret" as HTTP
+  Basic (RFC 7617) on the token endpoint, and receives an access token used as a
+  Bearer token on all subsequent API calls. TLS 1.2+ over HTTPS is required.
+summary:
+  types:
+  - http
+  - oauth2
+  api_key_in: []
+  oauth2_flows:
+  - clientCredentials
+schemes:
+- name: BasicTokenExchange
+  type: http
+  scheme: basic
+  description: >-
+    HTTP Basic authentication per RFC 7617 used only against the token endpoint
+    (POST /pcapigateway/account/token). Credentials are client_id (account_id)
+    and client_secret joined with ":" and Base64-encoded.
+  token_endpoint: https://pcendpoint.derbysoftsec.com/pcapigateway/account/token
+  response_fields:
+  - accessToken
+  - tokenType
+  sources:
+  - https://pc.knowledgebase.derbysoftsec.com/en/support/solutions/articles/70000663114-account
+- name: BearerToken
+  type: http
+  scheme: bearer
+  bearerFormat: opaque
+  description: >-
+    Bearer token presented on every API request as
+    "Authorization: Bearer <accessToken>". Applying a new access token expires
+    all previously issued tokens immediately; the PMS must call the token API at
+    least once every 90 days to refresh the token.
+  refresh_interval: at least once every 90 days
+  sources:
+  - https://pc.knowledgebase.derbysoftsec.com/en/support/solutions/articles/70000157127-api-overview
+contacts:
+- pms.service@derbysoft.net
+notes: >-
+  The Content Distributor and Content Supplier (OTA 2016B) APIs use
+  supplier/distributor credentials issued by DerbySoft rather than the Property
+  Connector bearer token; their auth mechanics are not publicly documented on
+  the knowledge base.
