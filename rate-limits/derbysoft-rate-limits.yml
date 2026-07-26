@@ -1,0 +1,25 @@
+specification: API Commons Rate Limits
+specificationVersion: '0.1'
+provider: DerbySoft
+providerId: derbysoft
+generated: '2026-07-18'
+method: searched
+source: https://pc.knowledgebase.derbysoftsec.com/en/support/solutions/articles/70000157127-api-overview
+created: '2026-07-18'
+modified: '2026-07-18'
+tags:
+- Rate Limiting
+- Hotels
+- Distribution
+description: >-
+  DerbySoft Property Connector Integration API rate limit. The API enforces a
+  maximum of 15 requests per second; exceeding it returns HTTP 429.
+responseCodes:
+  throttled: 429
+limits:
+- name: Property Connector API requests
+  scope: account
+  metric: requests_per_second
+  limit: 15
+  timeFrame: second
+  throttled_status: 429

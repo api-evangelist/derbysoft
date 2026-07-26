@@ -1,0 +1,30 @@
+generated: '2026-07-18'
+method: searched
+source: https://pc.knowledgebase.derbysoftsec.com/en/support/solutions/articles/70000157127-api-overview
+description: >-
+  Versioning and lifecycle posture for the DerbySoft APIs. Property Connector
+  and the Go Distributor/Supplier APIs are on version 4; the Content Distributor
+  and Content Supplier APIs implement the OTA 2016B specification. Changes are
+  communicated through dated "Enhancement Release" notes in the Content
+  Solutions knowledge base. No public status page, formal deprecation policy, or
+  RFC 8594 Sunset/Deprecation header support was found on the public docs.
+versioning:
+  scheme: per-message version field + product major version
+  current:
+    property_connector: v4
+    go_distributor_api: v4
+    go_supplier_api: v4
+    content_distributor_api: OTA 2016B
+    content_supplier_api: OTA 2016B
+  docs: https://pc.knowledgebase.derbysoftsec.com/en/support/solutions/articles/70000157127-api-overview
+deprecation:
+  policy_url: null
+  sunset_header: false
+  note: No public deprecation policy or Sunset/Deprecation header support documented.
+sla:
+  url: null
+  note: No public SLA/uptime target found.
+status_page: null
+changelog:
+  detail: changelog/derbysoft-changelog.yml
+  docs: https://contentsolutions.knowledgebase.derbysoftsec.com/en/support/solutions/articles/70000677250-enhancement-release

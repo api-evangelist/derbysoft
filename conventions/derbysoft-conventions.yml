@@ -1,0 +1,45 @@
+generated: '2026-07-18'
+method: searched
+source: https://pc.knowledgebase.derbysoftsec.com/en/support/solutions/articles/70000157127-api-overview
+description: >-
+  Cross-cutting request/response conventions for the DerbySoft Property
+  Connector Integration API — the semantics that apply to every operation rather
+  than any single endpoint. Captured from the Property Connector API overview.
+base_url: https://pcendpoint.derbysoftsec.com/pcapigateway
+api_style: JSON/REST over HTTPS (RFC 4627), UTF-8 only, TLS 1.2+
+content_type: application/json;charset=utf-8
+authentication:
+  scheme: Bearer token obtained via client-credentials Basic exchange
+  detail: authentication/derbysoft-authentication.yml
+message_header:
+  description: Every request carries a common message header.
+  fields:
+  - name: echoToken
+    required: true
+    description: Unique transaction ID (< 50 characters) echoed back on the response.
+  - name: timeStamp
+    required: true
+    description: UTC timestamp of the message.
+  - name: version
+    required: true
+    description: Message version identifier.
+idempotency:
+  supported: false
+  note: >-
+    The API defines an echoToken (a unique per-transaction correlation ID echoed
+    on the response) but the documentation does not describe it as an
+    idempotency key or guarantee dedup/replay semantics, so no idempotency
+    contract is asserted here.
+error_handling:
+  style: named string error codes with human-readable message
+  detail: errors/derbysoft-error-codes.yml
+rate_limiting:
+  limit: 15 requests per second
+  throttled_status: 429
+  detail: rate-limits/derbysoft-rate-limits.yml
+versioning:
+  scheme: per-message version field; Property Connector "v4" / Go APIs v4; Content APIs on OTA 2016B
+  detail: lifecycle/derbysoft-lifecycle.yml
+compliance:
+  claims: [PCI-DSS, GDPR]
+  detail: conformance/derbysoft-conformance.yml

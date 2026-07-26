@@ -1,0 +1,51 @@
+generated: '2026-07-18'
+method: searched
+source: https://pc.knowledgebase.derbysoftsec.com/en/support/solutions/articles/70000157138-error-code
+docs: https://pc.knowledgebase.derbysoftsec.com/en/support/solutions/articles/70000157138-error-code
+description: >-
+  Error-code registry for the DerbySoft Property Connector Integration API.
+  Errors are returned as named string codes with a human-readable message rather
+  than as RFC 9457 problem+json. Rate-limit violations (over 15 requests/second)
+  return HTTP 429. Captured verbatim from the Property Connector error-code
+  reference.
+format: named-codes
+envelope:
+  code_field: errorCode
+  message_field: message
+codes:
+- code: ChannelNotFound
+  meaning: The specified channel identifier does not exist in the system.
+  example_message: "Channel not found. channelId: {channelId}"
+- code: DuplicatedProduct
+  meaning: The room/rate (product or channel product) combination already exists.
+  example_message: "product or channel product is duplicated. roomId:{roomId} rateId:{rateId}"
+- code: HotelConnectionNotFound
+  meaning: The property's connection to the channel is unavailable.
+  example_message: "Hotel connection not found. accountId: {accountId}, hotelId: {hotelId}"
+- code: InternalError
+  meaning: Server-side processing failure.
+- code: InvalidField
+  meaning: A field value is incorrect or mismatched.
+  example_message: "channelId mismatch | hotelId mismatch | Invalid token"
+- code: InvalidMapping
+  meaning: Mapping relationships (room/rate/channel) conflict with existing data.
+- code: InvalidParameter
+  meaning: A parameter value is invalid.
+  example_message: "Invalid parameter hotelSystemConnectionId"
+- code: MissingField
+  meaning: Required setup or a required field is incomplete.
+  example_message: "Please complete the hotel, room, rate and product creation first"
+- code: OperationNotSupport
+  meaning: The requested operation is not allowed on this field.
+  example_message: "channelHotelId not support change"
+- code: PARAM_CHECK
+  meaning: Parameter validation failure (e.g. required field missing, invalid status).
+- code: ProductNotFound
+  meaning: The room/rate combination (channel product) does not exist.
+  example_message: "product roomId:{roomId} rateId:{rateId} not exist"
+- code: ProfileErr_HotelNotFound
+  meaning: The property account record is missing.
+  example_message: "Hotel not found. accountId: {accountId}, hotelId: {hotelId}"
+rate_limit_error:
+  http_status: 429
+  trigger: more than 15 requests per second

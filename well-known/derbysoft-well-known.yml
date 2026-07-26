@@ -1,0 +1,33 @@
+generated: '2026-07-18'
+method: searched
+source: live probes of DerbySoft website + API + docs hosts
+description: >-
+  Probe of the /.well-known/ discovery surface and /llms.txt across DerbySoft's
+  website, Property Connector API endpoint, and developer knowledge-base hosts.
+  No discovery documents were published (all 404/403). Absence is recorded, not
+  fabricated; no WellKnown/APICatalog pointer is wired because none exists.
+hosts:
+- host: https://www.derbysoft.com
+  documents:
+  - {path: /.well-known/security.txt, status: 404}
+  - {path: /.well-known/openid-configuration, status: 404}
+  - {path: /.well-known/oauth-authorization-server, status: 404}
+  - {path: /.well-known/api-catalog, status: 404}
+  - {path: /.well-known/ai-plugin.json, status: 404}
+  - {path: /llms.txt, status: 404}
+- host: https://pcendpoint.derbysoftsec.com
+  documents:
+  - {path: /.well-known/security.txt, status: 403}
+  - {path: /.well-known/openid-configuration, status: 403}
+  - {path: /.well-known/oauth-authorization-server, status: 403}
+  - {path: /.well-known/api-catalog, status: 403}
+  - {path: /.well-known/ai-plugin.json, status: 403}
+  - {path: /llms.txt, status: 403}
+- host: https://pc.knowledgebase.derbysoftsec.com
+  documents:
+  - {path: /.well-known/security.txt, status: 404}
+  - {path: /.well-known/openid-configuration, status: 404}
+  - {path: /.well-known/oauth-authorization-server, status: 404}
+  - {path: /.well-known/api-catalog, status: 404}
+  - {path: /.well-known/ai-plugin.json, status: 404}
+  - {path: /llms.txt, status: 404}

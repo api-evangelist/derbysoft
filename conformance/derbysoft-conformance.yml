@@ -1,0 +1,36 @@
+generated: '2026-07-18'
+method: searched
+source: https://pc.knowledgebase.derbysoftsec.com/en/support/solutions/articles/70000157127-api-overview
+description: >-
+  Standards and compliance posture for the DerbySoft APIs. The Property
+  Connector Integration API documentation states the platform is PCI-DSS
+  compliant and GDPR certified, and mandates TLS 1.2+. The Content Distributor
+  and Content Supplier APIs conform to the OpenTravel Alliance (OTA) 2016B
+  messaging specification.
+standards:
+- id: pci-dss
+  conforms: true
+  evidence: Property Connector API overview states "PCI-DSS compliant".
+- id: gdpr
+  conforms: true
+  evidence: Property Connector API overview states "GDPR certified".
+- id: ota-2016b
+  conforms: true
+  evidence: >-
+    Content Distributor / Supplier APIs implement OTA 2016B message pairs
+    (OTA_HotelSearchRQ/RS, OTA_HotelDescriptiveInfoRQ/RS).
+- id: tls-1.2-plus
+  conforms: true
+  evidence: API supports TLSv1.2 and above via HTTPS only.
+- id: rfc7617-basic-auth
+  conforms: true
+  evidence: Token endpoint uses HTTP Basic authentication per RFC 7617.
+- id: rfc4627-json
+  conforms: true
+  evidence: Property Connector API is a JSON REST API following RFC 4627.
+- id: rfc9457-problem-details
+  conforms: false
+  evidence: Errors are returned as named string codes, not application/problem+json.
+compliance:
+  programs: [PCI-DSS, GDPR]
+  docs: https://pc.knowledgebase.derbysoftsec.com/en/support/solutions/articles/70000157127-api-overview

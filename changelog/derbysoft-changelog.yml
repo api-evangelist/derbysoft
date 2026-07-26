@@ -1,0 +1,22 @@
+generated: '2026-07-18'
+method: searched
+source: https://contentsolutions.knowledgebase.derbysoftsec.com/en/support/solutions/articles/70000677250-enhancement-release
+docs: https://contentsolutions.knowledgebase.derbysoftsec.com/en/support/solutions/articles/70000677250-enhancement-release
+description: >-
+  DerbySoft Content Solutions (Distributor API) enhancement-release notes.
+  DerbySoft publishes dated enhancement notes rather than semantic version tags;
+  this captures the most recent published window. The live knowledge-base
+  article is the source of truth.
+versioning:
+  scheme: dated enhancement releases (no explicit version tags)
+  detail: lifecycle/derbysoft-lifecycle.yml
+entries:
+- date: '2025-09'
+  article_modified: '2025-10-10'
+  highlights:
+  - Country names — shortened/non-standard names converted to full standard names.
+  - Context code recognition changed from case-sensitive to case-insensitive.
+  - Policy numerical data now maintains a precision of 2 decimal places.
+  - Spoken-language data inconsistencies between Distributor API and GHR systems resolved.
+  - U.S. state names — V3-specific special tags removed; stored as standard state names.
+  - Facility content mapping optimized for meeting-room/restaurant content reuse with exception handling.

@@ -1,0 +1,31 @@
+generated: '2026-07-18'
+method: searched
+source: https://pc.knowledgebase.derbysoftsec.com/en/support/solutions/articles/70000157127-api-overview
+docs: https://pc.knowledgebase.derbysoftsec.com/en/support/solutions/articles/70000157136-test-scenarios
+description: >-
+  DerbySoft provides a separate test environment for the Property Connector
+  Integration API, hosted on the derbysoft-test.com domain, distinct from the
+  production derbysoftsec.com hosts. Onboarding uses a self-certification
+  process against published test scenarios. DerbySoft does not publish magic
+  test card numbers or hosted test tokens (it is a distribution/connectivity
+  platform, not a card acquirer); no verbatim test credentials are reproduced
+  here.
+environments:
+- name: test
+  base_urls:
+    ari_and_reservation_status: https://pcendpoint.derbysoft-test.com/pcapigateway/tunnel/{accountId}
+    property_content_channel: https://pcendpoint.derbysoft-test.com/pcapigateway/profile/{accountId}
+    account_token: https://pcendpoint.derbysoft-test.com/pcapigateway/account/token
+- name: production
+  base_urls:
+    ari_and_reservation_status: https://pcendpoint.derbysoftsec.com/pcapigateway/tunnel/{accountId}
+    property_content_channel: https://pcendpoint.derbysoftsec.com/pcapigateway/profile/{accountId}
+    account_token: https://pcendpoint.derbysoftsec.com/pcapigateway/account/token
+certification:
+  process: self-certification against published test scenarios
+  onboarding: 3-way calls between hotel supplier, distributor, and DerbySoft support
+  docs: https://pc.knowledgebase.derbysoftsec.com/en/support/solutions/articles/70000157136-test-scenarios
+credentials:
+  note: >-
+    Client ID and Client Secret for the test environment are issued by DerbySoft
+    on request to pms.service@derbysoft.net.

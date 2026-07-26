@@ -1,22 +1,87 @@
 aid: derbysoft
 name: DerbySoft
-description: 'DerbySoft is a company surfaced as a portfolio company of dcm-ventures and added to the
-  API Evangelist network as a stub for enrichment. Sector: enterprise. This profile is a lead awaiting
-  the enrichment pipeline.'
+description: >-
+  DerbySoft is a global travel-technology company — "The Travel Commerce
+  Accelerator" — that provides high-performance distribution connectivity,
+  content management, and digital-marketing services to the travel industry.
+  Founded in 2002 and operating worldwide, DerbySoft connects hotel suppliers,
+  channel managers, OTAs, metasearch engines, and TMCs through standardized
+  APIs: a JSON/REST Property Connector Integration API for pushing rates,
+  availability, inventory and reservations across 500+ channels, and OTA
+  2016B-based Content Distributor and Content Supplier APIs for querying and
+  writing hotel content (properties, guestrooms, rate plans, images). The
+  platform also covers streamlined connectivity, business-travel and flight
+  distribution, and AI-driven marketing. This profile was enriched from
+  DerbySoft's public developer knowledge bases.
 url: https://raw.githubusercontent.com/api-evangelist/derbysoft/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
 - dcm-ventures
-x-tier: stub
+x-tier: enriched
 x-tier-reason: portfolio-lead
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-18'
+image: https://www.derbysoft.com/wp-content/uploads/2026/03/DS-home-1.png
 tags:
 - Company
 - Enterprise
-apis: []
+- Travel
+- Hospitality
+- Hotels
+- Distribution
+- Connectivity
+- Content
+- Channel Management
+- Travel Technology
+apis:
+- name: DerbySoft Property Connector Integration API
+  description: >-
+    JSON/REST API for hotels and PMS/channel-manager systems to push
+    availability, rates and inventory (ARI), manage property, room, rate-plan
+    and channel configuration, and exchange reservations across 500+ channels.
+    Uses client-credentials Basic auth to obtain a Bearer token; TLS 1.2+ only;
+    rate limited to 15 requests/second.
+  humanURL: https://pc.knowledgebase.derbysoftsec.com/support/home
+  baseURL: https://pcendpoint.derbysoftsec.com/pcapigateway
+  properties:
+  - type: Documentation
+    url: https://pc.knowledgebase.derbysoftsec.com/support/home
+  - type: APIReference
+    url: https://pc.knowledgebase.derbysoftsec.com/en/support/solutions/articles/70000157127-api-overview
+  - type: Authentication
+    url: https://pc.knowledgebase.derbysoftsec.com/en/support/solutions/articles/70000663114-account
+- name: DerbySoft Content Distributor API
+  description: >-
+    OTA 2016B XML API for distributors (OTAs, metasearch, corporate travel,
+    travel agencies) to access hotel content in DerbySoft Content Solutions via
+    OTA_HotelSearchRQ/RS and OTA_HotelDescriptiveInfoRQ/RS message pairs.
+  humanURL: https://contentsolutions.knowledgebase.derbysoftsec.com/en/support/solutions/articles/70000673856-content-distributor-api
+  properties:
+  - type: Documentation
+    url: https://contentsolutions.knowledgebase.derbysoftsec.com/support/home
+- name: DerbySoft Content Supplier API
+  description: >-
+    API for property-industry suppliers to query and write hotel content —
+    property information, guestrooms, and rate plans — into DerbySoft Content
+    Solutions using GET and POST operations.
+  humanURL: https://contentsolutions.knowledgebase.derbysoftsec.com/en/support/solutions/articles/70000671527-about-content-supplier-api
+  properties:
+  - type: Documentation
+    url: https://contentsolutions.knowledgebase.derbysoftsec.com/support/home
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
@@ -25,3 +90,46 @@ maintainers:
 common:
 - type: Website
   url: https://www.derbysoft.com/
+- type: DeveloperPortal
+  url: https://pc.knowledgebase.derbysoftsec.com/support/home
+- type: Documentation
+  url: https://contentsolutions.knowledgebase.derbysoftsec.com/support/home
+- type: APIReference
+  url: https://pc.knowledgebase.derbysoftsec.com/en/support/solutions/articles/70000157127-api-overview
+- type: GettingStarted
+  url: https://pc.knowledgebase.derbysoftsec.com/en/support/solutions/articles/70000157120-overview
+- type: Support
+  url: https://www.derbysoft.com/contact/
+- type: Blog
+  url: https://www.derbysoft.com/resources/blog/
+- type: PrivacyPolicy
+  url: https://www.derbysoft.com/privacy-policy/
+- type: TermsOfService
+  url: https://www.derbysoft.com/legal/
+- type: Authentication
+  url: authentication/derbysoft-authentication.yml
+- type: ErrorCatalog
+  url: errors/derbysoft-error-codes.yml
+- type: Conventions
+  url: conventions/derbysoft-conventions.yml
+- type: RateLimits
+  url: rate-limits/derbysoft-rate-limits.yml
+- type: Lifecycle
+  url: lifecycle/derbysoft-lifecycle.yml
+- type: ChangeLog
+  url: changelog/derbysoft-changelog.yml
+- type: Sandbox
+  url: sandbox/derbysoft-sandbox.yml
+- type: Conformance
+  url: conformance/derbysoft-conformance.yml
+- type: Compliance
+  url: conformance/derbysoft-conformance.yml
+- type: DomainSecurity
+  url: security/derbysoft-domain-security.yml
+- type: LLMsTxt
+  url: llms/derbysoft-llms.txt
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence
