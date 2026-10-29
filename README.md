@@ -64,18 +64,99 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-DerbySoft — "The Travel Commerce Accelerator" — is a global travel-technology company providing high-performance distribution connectivity, hotel content management, and digital-marketing services to the travel industry. It connects hotel suppliers, channel managers, OTAs, metasearch engines, and TMCs through standardized APIs across 500+ channels.
+DerbySoft is a global travel-technology company — "The Travel Commerce Accelerator" — that provides high-performance distribution connectivity, content management, and digital-marketing services to the travel industry. Founded in 2002 and operating worldwide, DerbySoft connects hotel suppliers, channel managers, OTAs, metasearch engines, and TMCs through standardized APIs: a JSON/REST Property Connector Integration API for pushing rates, availability, inventory and reservations across 500+ channels, and OTA 2016B-based Content Distributor and Content Supplier APIs for querying and writing hotel content (properties, guestrooms, rate plans, images). The platform also covers streamlined connectivity, business-travel and flight distribution, and AI-driven marketing. This profile was enriched from DerbySoft's public developer knowledge bases.
 
-## APIs
+**Areas:** Company · Enterprise · Travel · Hospitality · Hotels · Distribution · Connectivity · Content · Channel Management · Travel Technology
 
-- **Property Connector Integration API** — JSON/REST; push availability, rates, inventory (ARI), manage property/room/rate/channel config, and exchange reservations. Bearer-token auth, TLS 1.2+, 15 req/sec.
-- **Content Distributor API** — OTA 2016B XML for distributors to access hotel content.
-- **Content Supplier API** — query and write property, guestroom, and rate-plan content.
+## DerbySoft on APIs.io
 
-## Links
+Everything profiled for DerbySoft is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/derbysoft/](https://apis.io/providers/derbysoft/)** — or go straight to one of the APIs or properties below.
 
-- Website: https://www.derbysoft.com/
-- Property Connector docs: https://pc.knowledgebase.derbysoftsec.com/support/home
-- Content Solutions docs: https://contentsolutions.knowledgebase.derbysoftsec.com/support/home
+### APIs (3)
 
-Backed by: dcm-ventures. Enriched by the API Evangelist enrichment pipeline from DerbySoft's public developer knowledge bases.
+- [DerbySoft Property Connector Integration API](https://apis.io/apis/derbysoft/derbysoft-property-connector-integration-api/) — JSON/REST API for hotels and PMS/channel-manager systems to push availability, rates and inventory (ARI), manage property, room, rate-plan and channel…
+- [DerbySoft Content Distributor API](https://apis.io/apis/derbysoft/derbysoft-content-distributor-api/) — OTA 2016B XML API for distributors (OTAs, metasearch, corporate travel, travel agencies) to access hotel content in DerbySoft Content Solutions via…
+- [DerbySoft Content Supplier API](https://apis.io/apis/derbysoft/derbysoft-content-supplier-api/) — API for property-industry suppliers to query and write hotel content — property information, guestrooms, and rate plans — into DerbySoft Content Solutions…
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Derbysoft Authentication](https://apis.io/security/derbysoft/derbysoft-authentication/)
+- [Derbysoft Domain Security](https://apis.io/security/derbysoft/derbysoft-domain-security/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Derbysoft Rate Limits](https://apis.io/rate-limits/derbysoft/derbysoft-rate-limits/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.derbysoft.com/)
+- [Documentation](https://contentsolutions.knowledgebase.derbysoftsec.com/support/home)
+- [Getting started](https://pc.knowledgebase.derbysoftsec.com/en/support/solutions/articles/70000157120-overview)
+- [API reference](https://pc.knowledgebase.derbysoftsec.com/en/support/solutions/articles/70000157127-api-overview)
+- [Support](https://www.derbysoft.com/contact/)
+- [Blog](https://www.derbysoft.com/resources/blog/)
+- [Terms of service](https://www.derbysoft.com/legal/)
+- [Privacy policy](https://www.derbysoft.com/privacy-policy/)
+
+## API Evangelist rating
+
+**Kin Score 34.7** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 69.6 |
+| Contract quality | 0.0 |
+| Contract governance | 18.2 |
+| Operational transparency | 36.8 |
+| Developer ergonomics | 64.3 |
+| Access clarity | 28.9 |
+
+**Agent readiness 7.9** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | documented (partial credit) |
+| OpenAPI Examples | — |
+| Rate Limit Signal | documented (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 29.4** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/derbysoft/](https://apis.io/providers/derbysoft/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for DerbySoft: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/derbysoft/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
